@@ -98,26 +98,39 @@ footer{background:white;padding:3rem 0 1.5rem;border-top:3px solid var(--accent1
 .footer-links a{color:var(--text-light);text-decoration:none;transition:all .3s}
 .footer-links a:hover{color:var(--accent1);padding-right:.5rem}
 .footer-bottom{padding-top:2rem;border-top:2px solid rgba(0,0,0,.05);text-align:center;color:var(--text-light)}
-@media(max-width:1024px){.hero-content{grid-template-columns:1fr;text-align:center}.hero-actions,.badges{justify-content:center}.footer-content{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){.nav-links{display:none}.services-grid,.features-grid,.contact-grid,.social-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr}}
 .reveal{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.16,1,.3,1)}
 .reveal.active{opacity:1;transform:translateY(0)}
 .pulse{animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+
+@media(max-width:1024px){.hero-content{grid-template-columns:1fr;text-align:center}.hero-actions,.badges{justify-content:center}.footer-content{grid-template-columns:1fr 1fr}}
+
+@media(max-width:768px){
+  header{padding:.6rem 0}
+  .logo{font-size:1.1rem}
+  .nav-links{display:none}
+  header .btn{font-size:.75rem;padding:.5rem 1rem}
+  .hero{padding:5rem 0 3rem}
+  h1{font-size:1.8rem}
+  .hero-subtitle{font-size:1rem}
+  .badge{font-size:.85rem;padding:.5rem 1rem}
+  .services-grid,.features-grid,.contact-grid,.social-grid{grid-template-columns:1fr}
+  .footer-content{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
 <header>
 <nav class="container">
-<div class="logo"> کافی‌نت آنلاین 24</div>
+<div class="logo">کافی‌نت آنلاین 24</div>
 <ul class="nav-links">
 <li><a href="#hero">خانه</a></li>
 <li><a href="#services">خدمات</a></li>
 <li><a href="#features">ویژگی‌ها</a></li>
 <li><a href="#contact">تماس</a></li>
 </ul>
-<a href="#contact" class="btn">همین الان پیام بدین </a>
+<a href="#contact" class="btn">همین الان پیام بدین</a>
 </nav>
 </header>
 
@@ -344,37 +357,35 @@ footer{background:white;padding:3rem 0 1.5rem;border-top:3px solid var(--accent1
 </div>
 </div>
   
-  
-  
-  <h3 style="color:white;margin:4rem 0 1.5rem;font-size:1.8rem">🌟 ما را در شبکه‌های اجتماعی دنبال کنید</h3>
+<h3 style="color:white;margin:4rem 0 1.5rem;font-size:1.8rem">🌟 ما را در شبکه‌های اجتماعی دنبال کنید</h3>
 <div class="social-grid">
-<a href="https://instagram.com/onlinecafenet24" target="_blank" class="social-btn instagram reveal" aria-label="Instagram">
+<a href="https://instagram.com/onlinecafenet24" target="_blank" class="social-btn instagram reveal">
 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/instagram.svg" alt="Instagram">
 <span>Instagram</span>
 </a>
 
-<a href="https://t.me/onlinecafenet24" target="_blank" class="social-btn telegram reveal" aria-label="Telegram">
+<a href="https://t.me/onlinecafenet24" target="_blank" class="social-btn telegram reveal">
 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/telegram.svg" alt="Telegram">
 <span>Telegram</span>
 </a>
 
-<a href="https://eitaa.com/onlinecafenet24" target="_blank" class="social-btn eitaa reveal" aria-label="Eitaa">
+<a href="https://eitaa.com/onlinecafenet24" target="_blank" class="social-btn eitaa reveal">
 <img src="https://eitaa.com/favicon.ico" alt="Eitaa">
 <span>Eitaa</span>
 </a>
 
-<a href="https://rubika.ir/onlinecafenet24" target="_blank" class="social-btn rubika reveal" aria-label="Rubika">
+<a href="https://rubika.ir/onlinecafenet24" target="_blank" class="social-btn rubika reveal">
 <img src="https://web.rubika.ir/assets/icons/icon-192x192.png" alt="Rubika">
 <span>Rubika</span>
 </a>
 
-<a href="https://ble.ir/onlinecafenet24" target="_blank" class="social-btn bale reveal" aria-label="Bale">
+<a href="https://ble.ir/onlinecafenet24" target="_blank" class="social-btn bale reveal">
 <img src="https://ble.ir/favicon.ico" alt="Bale">
 <span>Bale</span>
 </a>
 
 <a href="https://linkedin.com/in/onlinecafenet24" target="_blank" class="social-btn linkedin reveal">
-<span style="font-size:1.8rem"><img src="data:image/png;base64,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" /></span>
+<span style="font-size:1.8rem"><img src="data:image/png;base64,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" /></span>
 <span>LinkedIn</span>
 </a>
 </div>
@@ -385,7 +396,7 @@ footer{background:white;padding:3rem 0 1.5rem;border-top:3px solid var(--accent1
 <div class="container">
 <div class="footer-content">
 <div class="footer-about">
-<h3> کافی‌نت آنلاین 24 Online</h3>
+<h3>کافی‌نت آنلاین 24 Online</h3>
 <p>
 ارائه‌دهنده خدمات حرفه‌ای دانشجویی، طراحی سایت و هوش مصنوعی. همراه قابل اعتماد شما در مسیر موفقیت تحصیلی و حرفه‌ای.
 </p>
@@ -413,7 +424,7 @@ footer{background:white;padding:3rem 0 1.5rem;border-top:3px solid var(--accent1
 </div>
 
 <div class="footer-bottom">
-<p>© 1404 کافی‌نت آنلاین 24  - با آرزوی موفقیت برای موفقیت شما</p>
+<p>© 1404 کافی‌نت آنلاین 24 - با آرزوی موفقیت برای موفقیت شما</p>
 </div>
 </div>
 </footer>
