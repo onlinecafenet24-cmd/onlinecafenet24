@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Online cafenet 24 - خدمات دانشجویی و حرفه‌ای</title>
+<link href="https://cdn.jsdelivr.net/gh/aminabedi68/Estedad@v5.0/dist/Estedad-web.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@latest/dist/font-face.css" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg1:#fef3c7;--bg2:#fef9e7;--accent1:#f59e0b;--accent2:#10b981;--accent3:#3b82f6;--accent4:#ec4899;--text:#1f2937;--text-light:#6b7280;--shadow:0 10px 30px rgba(0,0,0,.1);--radius:20px}
+html{scroll-behavior:smooth}
+body{font-family:Vazir,Estedad,-apple-system,sans-serif;background:linear-gradient(135deg,var(--bg1) 0%,var(--bg2) 100%);color:var(--text);line-height:1.7;overflow-x:hidden;position:relative} 
+body::before{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f59e0b' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none;z-index:0}
+h1,h2,h3{font-weight:800;line-height:1.2}
+h1{font-size:clamp(2.5rem,6vw,4rem);background:linear-gradient(135deg,var(--accent1) 0%,var(--accent2) 50%,var(--accent3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradientShift 8s ease infinite;background-size:200% 200%}
+@keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--text)}
+.container{max-width:1300px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:2}
+header{position:fixed;top:0;inset-inline:0;padding:1rem 0;backdrop-filter:blur(20px);background:rgba(254,243,199,.95);border-bottom:2px solid rgba(245,158,11,.2);z-index:100;box-shadow:var(--shadow)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
+.logo{font-size:1.8rem;font-weight:900;color:var(--accent1);text-shadow:2px 2px 4px rgba(245,158,11,.2)}
+.nav-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}
+.nav-links a{color:var(--text);text-decoration:none;font-weight:600;transition:all .3s;padding:.5rem 1rem;border-radius:10px}
+.nav-links a:hover{background:var(--accent1);color:white;transform:translateY(-2px)}
+.btn{padding:.8rem 2rem;background:linear-gradient(135deg,var(--accent1) 0%,var(--accent2) 100%);color:white;border:none;border-radius:15px;font-weight:700;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;box-shadow:0 5px 20px rgba(245,158,11,.3);font-size:1.05rem}
+.btn:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 8px 30px rgba(245,158,11,.5)}
+.btn-secondary{background:linear-gradient(135deg,var(--accent3) 0%,var(--accent4) 100%);box-shadow:0 5px 20px rgba(59,130,246,.3)}
+.btn-secondary:hover{box-shadow:0 8px 30px rgba(59,130,246,.5)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:7rem 0 4rem}
+.hero-content{display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:center}
+.hero-text{animation:fadeInUp .8s ease-out}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero-subtitle{font-size:1.2rem;color:var(--text-light);margin:1.5rem 0;line-height:1.9}
+.badges{display:flex;gap:1rem;flex-wrap:wrap;margin:2rem 0}
+.badge{padding:.7rem 1.5rem;background:white;border:2px solid var(--accent1);border-radius:50px;font-size:1rem;color:var(--text);box-shadow:0 4px 15px rgba(0,0,0,.08);font-weight:600}
+.hero-actions{display:flex;gap:1rem;margin-top:2.5rem;flex-wrap:wrap}
+.hero-visual{position:relative;animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+.visual-card{background:white;border-radius:var(--radius);padding:2.5rem;box-shadow:var(--shadow);border:3px solid var(--accent1)}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.stat-item{text-align:center;padding:1rem;background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(16,185,129,.1));border-radius:15px}
+.stat-number{font-size:2.2rem;font-weight:900;background:linear-gradient(135deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
+.stat-label{color:var(--text-light);font-size:.9rem;margin-top:.3rem;font-weight:600}
+.section{padding:6rem 0}
+.section-header{text-align:center;margin-bottom:4rem}
+.section-subtitle{color:var(--text-light);font-size:1.1rem;margin-top:1rem;max-width:700px;margin-inline:auto}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.service-card{background:white;border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);transition:all .3s;position:relative;overflow:hidden;border:2px solid transparent}
+.service-card::before{content:'';position:absolute;top:-50%;right:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,var(--accent1),var(--accent2),var(--accent3),var(--accent4),var(--accent1));opacity:0;transition:all .5s;animation:rotate 8s linear infinite}
+@keyframes rotate{100%{transform:rotate(360deg)}}
+.service-card:hover{transform:translateY(-10px);box-shadow:0 20px 50px rgba(0,0,0,.15);border-color:var(--accent1)}
+.service-card:hover::before{opacity:.1}
+.service-icon{font-size:3.5rem;margin-bottom:1rem;display:block;position:relative;z-index:1}
+.service-card h3{font-size:1.4rem;margin-bottom:1rem;color:var(--text);position:relative;z-index:1}
+.service-card p{color:var(--text-light);line-height:1.8;margin-bottom:1.5rem;position:relative;z-index:1}
+.service-list{list-style:none;display:flex;flex-direction:column;gap:.7rem;position:relative;z-index:1}
+.service-list li{color:var(--text-light);font-size:.95rem;padding-right:1.5rem;position:relative}
+.service-list li::before{content:'✓';position:absolute;right:0;color:var(--accent2);font-weight:700;font-size:1.2rem}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2.5rem;margin-top:4rem}
+.feature-item{text-align:center;padding:2rem;background:white;border-radius:var(--radius);box-shadow:var(--shadow);transition:all .3s;border:2px solid transparent}
+.feature-item:hover{transform:translateY(-8px);border-color:var(--accent2)}
+.feature-icon{width:90px;height:90px;margin:0 auto 1.5rem;background:linear-gradient(135deg,var(--accent1),var(--accent2));border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:3rem;box-shadow:0 8px 25px rgba(245,158,11,.3)}
+.feature-item h3{font-size:1.3rem;margin-bottom:.8rem}
+.feature-item p{color:var(--text-light)}
+.contact-section{background:linear-gradient(135deg,var(--accent1) 0%,var(--accent2) 50%,var(--accent3) 100%);padding:6rem 2rem;margin:4rem 0;border-radius:30px;text-align:center;position:relative;overflow:hidden}
+.contact-section::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");opacity:.3}
+.contact-section h2{color:white;position:relative;z-index:1}
+.contact-section p{color:white;font-size:1.2rem;margin:1.5rem auto 3rem;max-width:700px;position:relative;z-index:1}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:3rem}
+.contact-card{background:white;border-radius:20px;padding:2rem;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.2);transition:all .3s}
+.contact-card:hover{transform:translateY(-5px);box-shadow:0 15px 50px rgba(0,0,0,.3)}
+.contact-card h3{margin:1rem 0 .5rem;font-size:1.2rem}
+.contact-card a{color:var(--accent1);text-decoration:none;font-weight:600;font-size:1.05rem}
+.contact-card a:hover{text-decoration:underline}
+.social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:3rem}
+.social-btn{background:white;padding:1.5rem;border-radius:15px;text-align:center;text-decoration:none;color:var(--text);font-weight:700;display:flex;align-items:center;justify-content:center;gap:.8rem;font-size:1.1rem;box-shadow:0 8px 25px rgba(0,0,0,.15);transition:all .3s;border:2px solid transparent}
+.social-btn img{width:1.8rem;height:1.8rem;display:block} 
+.social-btn:hover{transform:translateY(-5px);box-shadow:0 12px 35px rgba(0,0,0,.25)}
+.social-btn.instagram{border-color:#e4405f}
+.social-btn.instagram:hover{background:#e4405f;color:white}
+.social-btn.telegram{border-color:#0088cc}
+.social-btn.telegram:hover{background:#0088cc;color:white}
+.social-btn.eitaa{border-color:#00a862}
+.social-btn.eitaa:hover{background:#00a862;color:white}
+.social-btn.rubika{border-color:#e63946}
+.social-btn.rubika:hover{background:#e63946;color:white}
+.social-btn.bale{border-color:#00b9f1}
+.social-btn.bale:hover{background:#00b9f1;color:white}
+.social-btn.linkedin{border-color:#0077b5}
+.social-btn.linkedin:hover{background:#0077b5;color:white}
+footer{background:white;padding:3rem 0 1.5rem;border-top:3px solid var(--accent1);margin-top:4rem}
+.footer-content{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2rem}
+.footer-about h3{color:var(--accent1);margin-bottom:1rem;font-size:1.6rem}
+.footer-about p{color:var(--text-light);line-height:1.9}
+.footer-section h4{margin-bottom:1.2rem;color:var(--text);font-size:1.1rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.footer-links a{color:var(--text-light);text-decoration:none;transition:all .3s}
+.footer-links a:hover{color:var(--accent1);padding-right:.5rem}
+.footer-bottom{padding-top:2rem;border-top:2px solid rgba(0,0,0,.05);text-align:center;color:var(--text-light)}
+@media(max-width:1024px){.hero-content{grid-template-columns:1fr;text-align:center}.hero-actions,.badges{justify-content:center}.footer-content{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links{display:none}.services-grid,.features-grid,.contact-grid,.social-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr}}
+.reveal{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+.reveal.active{opacity:1;transform:translateY(0)}
+.pulse{animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+</style>
+</head>
+<body>
+
+<header>
+<nav class="container">
+<div class="logo">☕ CofeeNet</div>
+<ul class="nav-links">
+<li><a href="#hero">خانه</a></li>
+<li><a href="#services">خدمات</a></li>
+<li><a href="#features">ویژگی‌ها</a></li>
+<li><a href="#contact">تماس</a></li>
+</ul>
+<a href="#contact" class="btn">همین الان شروع کنید 🚀</a>
+</nav>
+</header>
+
+<section id="hero" class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="hero-text">
+<h1>با خیال راحت به ما بسپارید ✨</h1>
+<p class="hero-subtitle">
+تیم حرفه‌ای ما آماده انجام پروژه‌ها، تحقیقات و خدمات دانشجویی شما با بالاترین کیفیت و سریع‌ترین زمان تحویل است. از امروز استرس پروژه‌هایتان را کنار بگذارید!
+</p>
+<div class="badges">
+<span class="badge">🎓 کیفیت تضمین شده</span>
+<span class="badge">💰 قیمت منصفانه</span>
+<span class="badge">⚡ تحویل سریع</span>
+<span class="badge">🔒 محرمانه</span>
+</div>
+<div class="hero-actions">
+<a href="#contact" class="btn pulse">درخواست خدمات</a>
+<a href="#services" class="btn btn-secondary">مشاهده خدمات</a>
+</div>
+</div>
+
+<div class="hero-visual">
+<div class="visual-card">
+<h3 style="text-align:center;margin-bottom:1.5rem;color:var(--accent1)">✅ اعتماد شما، افتخار ماست</h3>
+<div class="stat-grid">
+<div class="stat-item">
+<span class="stat-number">۲۴/۷</span>
+<span class="stat-label">پشتیبانی آنلاین</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">۱۰۰٪</span>
+<span class="stat-label">رضایت مشتری</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">سریع</span>
+<span class="stat-label">تحویل فوری</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">حرفه‌ای</span>
+<span class="stat-label">تیم متخصص</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="services" class="section">
+<div class="container">
+<div class="section-header reveal">
+<h2>🎯 خدمات ما</h2>
+<p class="section-subtitle">
+هر چیزی که برای موفقیت تحصیلی و حرفه‌ای شما نیاز است
+</p>
+</div>
+
+<div class="services-grid">
+<div class="service-card reveal">
+<span class="service-icon">📘</span>
+<h3>انجام پروژه دانشگاهی</h3>
+<p>انجام کامل پروژه‌های دانشگاهی تمام رشته‌ها با کیفیت عالی</p>
+<ul class="service-list">
+<li>تمام رشته‌های دانشگاهی</li>
+<li>تحویل به‌موقع تضمینی</li>
+<li>بازبینی رایگان</li>
+</ul>
+</div>
+
+<div class="service-card reveal">
+<span class="service-icon">🛠️</span>
+<h3>پروژه‌های فنی و مهندسی</h3>
+<p>انجام پروژه‌های تخصصی مهندسی با نرم‌افزارهای حرفه‌ای</p>
+<ul class="service-list">
+<li>عمران: ETABS، SAFE</li>
+<li>کامپیوتر: Python، MATLAB</li>
+<li>مکانیک: SolidWorks</li>
+<li>معماری: AutoCAD</li>
+<li>صنایع و سایر رشته‌ها</li>
+</ul>
+</div>
+
+<div class="service-card reveal">
+<span class="service-icon">🤖</span>
+<h3>خدمات هوش مصنوعی</h3>
+<p>استفاده از آخرین تکنولوژی AI برای کار شما</p>
+<ul class="service-list">
+<li>تولید محتوا با AI</li>
+<li>تحلیل و پردازش داده</li>
+<li>خلاصه‌سازی هوشمند</li>
+<li>ترجمه پیشرفته</li>
+</ul>
+</div>
+
+<div class="service-card reveal">
+<span class="service-icon">🌐</span>
+<h3>طراحی سایت</h3>
+<p>طراحی و توسعه وب‌سایت‌های حرفه‌ای</p>
+<ul class="service-list">
+<li>سایت شرکتی</li>
+<li>فروشگاه اینترنتی</li>
+<li>وب‌سایت شخصی</li>
+<li>وردپرس و اختصاصی</li>
+</ul>
+</div>
+
+<div class="service-card reveal">
+<span class="service-icon">📚</span>
+<h3>خدمات عمومی</h3>
+<p>خدمات متنوع برای نیازهای روزمره</p>
+<ul class="service-list">
+<li>ترجمه تخصصی</li>
+<li>مقاله و تحقیق</li>
+<li>تایپ و پاورپوینت</li>
+<li>اکسل و تولید محتوا</li>
+</ul>
+</div>
+
+<div class="service-card reveal">
+<span class="service-icon">📝</span>
+<h3>علوم انسانی</h3>
+<p>پروژه‌های تخصصی علوم انسانی و اجتماعی</p>
+<ul class="service-list">
+<li>حقوق</li>
+<li>روان‌شناسی</li>
+<li>مدیریت و اقتصاد</li>
+<li>علوم تربیتی</li>
+<li>زبان و ادبیات</li>
+</ul>
+</div>
+
+<div class="service-card reveal">
+<span class="service-icon">🎓</span>
+<h3>آموزش و مشاوره</h3>
+<p>آموزش تخصصی و مشاوره حرفه‌ای</p>
+<ul class="service-list">
+<li>مشاوره پروژه</li>
+<li>آموزش نرم‌افزار</li>
+<li>راهنمایی تحقیق</li>
+<li>مشاوره تحصیلی</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="features" class="section">
+<div class="container">
+<div class="section-header reveal">
+<h2>💎 چرا CofeeNet؟</h2>
+<p class="section-subtitle">
+مزایای کار با ما - انتخاب هوشمندانه برای موفقیت شما
+</p>
+</div>
+
+<div class="features-grid">
+<div class="feature-item reveal">
+<div class="feature-icon">⚡</div>
+<h3>سرعت فوق‌العاده</h3>
+<p>تحویل سریع بدون کم‌ترین افت کیفیت</p>
+</div>
+
+<div class="feature-item reveal">
+<div class="feature-icon">🎯</div>
+<h3>دقت بالا</h3>
+<p>انجام پروژه با دقت و رعایت تمام جزئیات</p>
+</div>
+
+<div class="feature-item reveal">
+<div class="feature-icon">💼</div>
+<h3>تیم متخصص</h3>
+<p>همکاری با بهترین کارشناسان هر حوزه</p>
+</div>
+
+<div class="feature-item reveal">
+<div class="feature-icon">🔒</div>
+<h3>امنیت کامل</h3>
+<p>حفظ محرمانگی اطلاعات شما</p>
+</div>
+
+<div class="feature-item reveal">
+<div class="feature-icon">💬</div>
+<h3>پشتیبانی ۲۴/۷</h3>
+<p>آماده پاسخگویی در هر زمان</p>
+</div>
+
+<div class="feature-item reveal">
+<div class="feature-icon">💰</div>
+<h3>قیمت منصفانه</h3>
+<p>بهترین قیمت برای بهترین کیفیت</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact-section">
+<div class="container">
+<h2>📞 با ما در ارتباط باشید</h2>
+<p>
+هم‌اکنون با ما تماس بگیرید و از مشاوره رایگان بهره‌مند شوید. ما آماده‌ایم تا بهترین خدمات را به شما ارائه دهیم!
+</p>
+
+<div class="contact-grid">
+<div class="contact-card reveal">
+<div style="font-size:3rem;margin-bottom:.5rem">📧</div>
+<h3>ایمیل</h3>
+<a href="mailto:onlinecafenet24@gmail.com">onlinecafenet24@gmail.com</a>
+</div>
+
+<div class="contact-card reveal">
+<div style="font-size:3rem;margin-bottom:.5rem">📱</div>
+<h3>شماره تماس</h3>
+<a href="tel:+989052704491" dir="ltr">09052704491</a>
+</div>
+</div>
+
+<h3 style="color:white;margin:4rem 0 1.5rem;font-size:1.8rem">🌟 ما را در شبکه‌های اجتماعی دنبال کنید</h3>
+<div class="social-grid">
+<a href="https://instagram.com/onlinecafenet24" target="_blank" class="social-btn instagram reveal" aria-label="Instagram">
+<img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/instagram.svg" alt="Instagram">
+<span>Instagram</span>
+</a>
+
+<a href="https://t.me/onlinecafenet24" target="_blank" class="social-btn telegram reveal" aria-label="Telegram">
+<img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/telegram.svg" alt="Telegram">
+<span>Telegram</span>
+</a>
+
+<a href="https://eitaa.com/onlinecafenet24" target="_blank" class="social-btn eitaa reveal" aria-label="Eitaa">
+<img src="https://eitaa.com/favicon.ico" alt="Eitaa">
+<span>Eitaa</span>
+</a>
+
+<a href="https://rubika.ir/onlinecafenet24" target="_blank" class="social-btn rubika reveal" aria-label="Rubika">
+<img src="https://web.rubika.ir/assets/icons/icon-192x192.png" alt="Rubika">
+<span>Rubika</span>
+</a>
+
+<a href="https://ble.ir/onlinecafenet24" target="_blank" class="social-btn bale reveal" aria-label="Bale">
+<img src="https://ble.ir/favicon.ico" alt="Bale">
+<span>Bale</span>
+</a>
+
+<a href="https://linkedin.com/in/onlinecafenet24" target="_blank" class="social-btn linkedin reveal">
+<span style="font-size:1.8rem"><img src="data:image/png;base64,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" /></span>
+<span>LinkedIn</span>
+</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-about">
+<h3>☕ CofeeNet Online</h3>
+<p>
+ارائه‌دهنده خدمات حرفه‌ای دانشجویی، طراحی سایت و هوش مصنوعی. همراه قابل اعتماد شما در مسیر موفقیت تحصیلی و حرفه‌ای.
+</p>
+</div>
+
+<div class="footer-section">
+<h4>خدمات</h4>
+<ul class="footer-links">
+<li><a href="#services">انجام پروژه</a></li>
+<li><a href="#services">هوش مصنوعی</a></li>
+<li><a href="#services">طراحی سایت</a></li>
+<li><a href="#services">آموزش و مشاوره</a></li>
+</ul>
+</div>
+
+<div class="footer-section">
+<h4>ارتباط</h4>
+<ul class="footer-links">
+<li><a href="mailto:onlinecafenet24@gmail.com">ایمیل</a></li>
+<li><a href="tel:+989052704491">تلفن</a></li>
+<li><a href="https://instagram.com/onlinecafenet24">اینستاگرام</a></li>
+<li><a href="https://t.me/onlinecafenet24">تلگرام</a></li>
+</ul>
+</div>
+</div>
+
+<div class="footer-bottom">
+<p>© ۱۴۰۳ CofeeNet Online - با ❤️ برای موفقیت شما</p>
+</div>
+</div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+document.querySelectorAll('.reveal').forEach(el=>{
+const top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-100)el.classList.add('active');
+});
+});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.addEventListener('click',e=>{
+e.preventDefault();
+const target=document.querySelector(a.getAttribute('href'));
+if(target)window.scrollTo({top:target.offsetTop-80,behavior:'smooth'});
+});
+});
+window.dispatchEvent(new Event('scroll'));
+</script>
+</body>
+</html>
